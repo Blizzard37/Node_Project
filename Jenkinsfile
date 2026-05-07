@@ -25,6 +25,18 @@ pipeline {
                 }
                 }
 
+                    post {
+                            success {
+                            archiveArtifacts artifacts: 'Terraform/plan-output.txt'
+                            }
+                        }
+
+            }
+        }
+
+        stage('Approval'){
+            steps{
+                input 'Do you approve?'
             }
         }
     }
