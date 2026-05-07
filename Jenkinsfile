@@ -1,9 +1,10 @@
 pipeline {
-    agent any
-
-    environment {
-        AWS_DEFAULT_REGION = 'ca-central-1'
+     agent {
+        docker {
+            image 'hashicorp/terraform:latest'
+        }
     }
+
 
     stages {
 
