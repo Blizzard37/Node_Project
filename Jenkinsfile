@@ -17,7 +17,7 @@ pipeline {
                     string(credentialsId: 'aws-secret-key', variable: 'AWS_SECRET_ACCESS_KEY')
                 ]) 
                 {
-                dir(terraform)
+                dir('Terraform')
                     {
                     sh 'terraform init'
                     sh 'terraform plan -out=tfplan'
