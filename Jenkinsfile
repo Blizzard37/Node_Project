@@ -25,13 +25,14 @@ pipeline {
                 }
                 }
 
-                    post {
+                   
+
+            }
+             post {
                             success {
                             archiveArtifacts artifacts: 'Terraform/plan-output.txt'
                             }
                         }
-
-            }
         }
 
         stage('Approval'){
